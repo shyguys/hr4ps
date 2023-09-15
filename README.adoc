@@ -1,0 +1,12 @@
+= hr4ps
+:toc: auto
+
+Prints horizontal rules.
+
+== Setup
+
+tbc
+
+== Usage
+
+tbc
