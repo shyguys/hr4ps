@@ -5,8 +5,18 @@ Prints horizontal rules.
 
 == Setup
 
-tbc
+Make the module available to your current session, e.g.:
+
+[source, powershell]
+----
+Import-Module ./hr4ps.psd1
+----
 
 == Usage
 
-tbc
+Please refer to the module's usage by running:
+
+[source, powershell]
+----
+hr4ps -?
+----
