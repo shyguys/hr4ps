@@ -1,22 +1,29 @@
 = hr4ps
 :toc: auto
 
-Prints horizontal rules.
+Prints horizontal rules. PowerShell port of https://github.com/shyguys/hr.
 
 == Setup
 
-Make the module available to your current session, e.g.:
+Install PowerShell
 
-[source, powershell]
+[source, shell]
 ----
-Import-Module ./hr4ps.psd1
+brew install powershell
+----
+
+Wrap the PowerShell call in a helper script, e.g.:
+
+[source, shell]
+----
+echo "$(pwd)/Source/hr4ps.ps1 \"\$@\"" > ~/bin/hr4ps
 ----
 
 == Usage
 
-Please refer to the module's usage by running:
+Please refer to the script's usage by running:
 
-[source, powershell]
+[source, shell]
 ----
-hr4ps -?
+hr4ps --help
 ----
