@@ -42,6 +42,8 @@ begin {
     Set-Variable PROG -Option Constant -Value "hr4ps"
     Set-Variable USAGE -Option Constant -Value "Usage: $PROG [-h] [-p] [-i STR] [-l INT] [-o STR] [title]"
     Set-Variable HELP_TXT -Option Constant -Value @"
+$USAGE
+
 Positional arguments:
     title               Title to insert in center.
 
@@ -55,7 +57,7 @@ Style proprties:
     -o, --outer STR     Outer character(s) (default: #).
 "@
     if ($Help) {
-        Write-Host $HELP_TEXT
+        Write-Host $HELP_TXT
         exit
     }
     $Inner = $Inner.Trim().Substring(0, 1)
