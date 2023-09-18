@@ -66,13 +66,19 @@ Style proprties:
 }
 
 process {
-    if ($AsParagraph) {
-        Write-Paragraph $Length $Outer $Inner $Title
+    try {
+        if ($AsParagraph) {
+            Write-Paragraph $Length $Outer $Inner $Title
+        }
+        elseif ($Title) {
+            Write-Titled $Length $Outer $Inner $Title
+        }
+        else {
+            Write-Untitled $Length $Outer $Inner
+        }
     }
-    elseif ($Title) {
-        Write-Titled $Length $Outer $Inner $Title
-    }
-    else {
-        Write-Untitled $Length $Outer $Inner
+    catch {
+        Write-Error $_.Exception.Message
+        exit 1
     }
 }

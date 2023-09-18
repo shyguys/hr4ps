@@ -45,7 +45,7 @@ function Write-Titled {
 
     $SpareLen = $Length - $Outer.Length * 2 - $Title.Length - 4
     if ($SpareLen -lt 2) {
-        throw "Length insufficient, $(2 - $SpareLen) more required."
+        throw "length insufficient, $(2 - $SpareLen) more required"
     }
     $RSpareLen = [Math]::Floor($SpareLen / 2)
     $LSpareLen = $SpareLen - $RSpareLen
@@ -67,7 +67,7 @@ function Write-Untitled {
 
     $SpareLen = $Length - $Outer.Length * 2 - 2
     if ($SpareLen -lt 1) {
-        throw "Length insufficient, $(1 - $SpareLen) more required."
+        throw "length insufficient, $(1 - $SpareLen) more required"
     }
     Write-Host "$Outer $($Inner * $SpareLen) $Outer"
 }
